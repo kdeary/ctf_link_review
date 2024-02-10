@@ -5,7 +5,8 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { firefox, devices } from 'playwright';
+import '@playwright/browser-firefox';
+import { firefox } from 'playwright';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -79,7 +80,7 @@ async function startReviewingLinks() {
 	console.log('Reviewing new links....', users);
 	await clickUserLinks();
 	console.log('Finished reviewing links.');
-	setTimeout(() => startReviewingLinks(), 30000);
+	setTimeout(() => startReviewingLinks(), 10000);
 }
 
 function sleep(ms) {
