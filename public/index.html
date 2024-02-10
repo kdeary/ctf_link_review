@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+	<script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.118.2">
+	<title>Gary's Link Review Blog</title>
+
+	<!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/"> -->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+	<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<!-- Favicons -->
+	<!-- <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"> -->
+	<!-- <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32/x32" type="image/png">
+	<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"> -->
+	<!-- <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json"> -->
+	<!-- <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9"> -->
+	<!-- <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico"> -->
+	<meta name="theme-color" content="#712cf9">
+
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		.b-example-divider {
+			width: 100%;
+			height: 3rem;
+			background-color: rgba(0, 0, 0, .1);
+			border: solid rgba(0, 0, 0, .15);
+			border-width: 1px 0;
+			box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+		}
+
+		.b-example-vr {
+			flex-shrink: 0;
+			width: 1.5rem;
+			height: 100vh;
+		}
+
+		.bi {
+			vertical-align: -.125em;
+			fill: currentColor;
+		}
+
+		.nav-scroller {
+			position: relative;
+			z-index: 2;
+			height: 2.75rem;
+			overflow-y: hidden;
+		}
+
+		.nav-scroller .nav {
+			display: flex;
+			flex-wrap: nowrap;
+			padding-bottom: 1rem;
+			margin-top: -1px;
+			overflow-x: auto;
+			text-align: center;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.btn-bd-primary {
+			--bd-violet-bg: #712cf9;
+			--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+			--bs-btn-font-weight: 600;
+			--bs-btn-color: var(--bs-white);
+			--bs-btn-bg: var(--bd-violet-bg);
+			--bs-btn-border-color: var(--bd-violet-bg);
+			--bs-btn-hover-color: var(--bs-white);
+			--bs-btn-hover-bg: #6528e0;
+			--bs-btn-hover-border-color: #6528e0;
+			--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+			--bs-btn-active-color: var(--bs-btn-hover-color);
+			--bs-btn-active-bg: #5a23c8;
+			--bs-btn-active-border-color: #5a23c8;
+		}
+
+		.bd-mode-toggle {
+			z-index: 1500;
+		}
+
+		.bd-mode-toggle .dropdown-menu .active .bi {
+			display: block !important;
+		}
+	</style>
+
+
+	<!-- Custom styles for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="https://getbootstrap.com/docs/5.3/examples/blog/blog.css" rel="stylesheet">
+</head>
+
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+		<symbol id="check2" viewBox="0 0 16 16">
+			<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+		</symbol>
+		<symbol id="circle-half" viewBox="0 0 16 16">
+			<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+		</symbol>
+		<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+			<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+			<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+		</symbol>
+		<symbol id="sun-fill" viewBox="0 0 16 16">
+			<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+		</symbol>
+	</svg>
+
+	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+		<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+			<svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+				<use href="#circle-half"></use>
+			</svg>
+			<span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+		</button>
+		<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+						<use href="#sun-fill"></use>
+					</svg>
+					Light
+					<svg class="bi ms-auto d-none" width="1em" height="1em">
+						<use href="#check2"></use>
+					</svg>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+						<use href="#moon-stars-fill"></use>
+					</svg>
+					Dark
+					<svg class="bi ms-auto d-none" width="1em" height="1em">
+						<use href="#check2"></use>
+					</svg>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+						<use href="#circle-half"></use>
+					</svg>
+					Auto
+					<svg class="bi ms-auto d-none" width="1em" height="1em">
+						<use href="#check2"></use>
+					</svg>
+				</button>
+			</li>
+		</ul>
+	</div>
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+		<symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+			<circle cx="12" cy="12" r="10" />
+			<path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+		</symbol>
+		<symbol id="cart" viewBox="0 0 16 16">
+			<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+		</symbol>
+		<symbol id="chevron-right" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+		</symbol>
+	</svg>
+
+	<div class="container">
+		<header class="lh-1 py-3">
+			<div class="row flex-nowrap justify-content-between align-items-center">
+				<div class="col-4 pt-1">
+					<a class="link-secondary" href="#"></a>
+				</div>
+				<div class="col-4 text-center">
+					<a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Gary's Link Review Blog</a>
+				</div>
+				<div class="col-4 d-flex justify-content-end align-items-center">
+					
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<main class="container">
+		<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+			<div class="col-lg-9 px-0">
+				<h1 class="display-4 fst-italic">The Pitfalls of Popularity: A Deep Dive into Mainstream Mediocrity</h1>
+				<p class="lead my-3">In this edition, we explore the vast, uninspired sea of popular links submitted by hopeful visitors. Prepare yourself for a journey through the mundane, the cliché, and the painfully average. Witness the epitome of mediocrity as we dissect why each link fails to impress, entertain, or enlighten. </p>
+				<p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+			</div>
+		</div>
+
+		<div class="row mb-2">
+			<div class="col-md-6">
+				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+					<div class="col p-4 d-flex flex-column position-static">
+						<strong class="d-inline-block mb-2 text-primary-emphasis">.com TLD</strong>
+						<h3 class="mb-0">A Bitter Reflection on .com Mediocrity</h3>
+						<div class="mb-1 text-body-secondary">Nov 12</div>
+						<p class="card-text mb-auto">In an ocean of .com domains, we find ourselves adrift amidst a flotilla of uninspired, derivative content.</p>
+						<a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+							Continue reading
+							<svg class="bi">
+								<use xlink:href="#chevron-right" />
+							</svg>
+						</a>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+							<title>Placeholder</title>
+							<rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+					<div class="col p-4 d-flex flex-column position-static">
+						<strong class="d-inline-block mb-2 text-primary-emphasis">.org TLD</strong>
+						<h3 class="mb-0">The Illusion of Altruism: A .org Exposé</h3>
+						<div class="mb-1 text-body-secondary">Nov 12</div>
+						<p class="card-text mb-auto">Peeling back the veneer of .org's philanthropic facade, we uncover a landscape littered with pretentiousness.</p>
+						<a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+							Continue reading
+							<svg class="bi">
+								<use xlink:href="#chevron-right" />
+							</svg>
+						</a>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+							<title>Placeholder</title>
+							<rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row g-5">
+			<div class="col-md-8">
+				<h3 class="pb-4 mb-4 fst-italic border-bottom">
+					My Reviews
+				</h3>
+
+				<article class="blog-post">
+					<div class="mb-3">
+						<label for="reviewInput" class="form-label">Submit a link for me to review here:</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="reviewInput" placeholder="Your garbage link goes here" maxlength="255">
+							<button class="btn btn-primary" type="button" id="submitButton">Submit</button>
+						</div>
+					</div>
+					<hr />
+				</article>
+
+				<article class="blog-post" id="thearticle" hidden>
+					<h2 class="display-5 link-body-emphasis mb-1">A user posted a new link!</h2>
+					<p class="blog-post-meta"><span id="thedate"></span> by <a href="#">You</a></p>
+
+					<p>I will review your link soon... <br> Link to review: <a id="thelink" href=""></a></p>
+				</article>
+
+				<article class="blog-post">
+					<h2 class="display-5 link-body-emphasis mb-1">The GitHub Mirage</h2>
+					<p class="blog-post-meta">February 8, 2024 by <a href="#">Gary</a></p>
+
+					<p>In today's deep dive, we dissect the behemoth of code hosting: GitHub.com. Lauded as the developer's haven, this platform masquerades as the epitome of innovation and collaboration. Yet, beneath its sleek interface and vibrant community lies a stark reality. GitHub, for all its merits, often becomes a graveyard of abandoned projects, a testament to the fleeting enthusiasm of weekend warriors and the cyclical hype of technologies doomed to obsolescence. It's a place where the quantity of repositories dwarfs quality, where true gems are buried under mountains of mediocrity.</p>
+				</article>
+
+				<article class="blog-post">
+					<h2 class="display-5 link-body-emphasis mb-1">Gmail: The Monolith of Missed Opportunities</h2>
+					<p class="blog-post-meta">February 8, 2024 by <a href="#">Gary</a></p>
+
+					<p>Turning our critical eye towards Gmail.com, the ubiquitous email service that's become as synonymous with online communication as breathing is to life. On the surface, Gmail presents itself as the pinnacle of efficiency and integration. However, scratch that surface and you'll find a bloated behemoth, struggling under the weight of unnecessary features and an interface that confounds more than it aids. In its quest to be all things to all users, Gmail has lost the simplicity and elegance that once made email a revolutionary tool. It's a classic case of overengineering meeting the paradox of choice, leaving users adrift in a sea of unread emails and forgotten attachments.</p>
+				</article>
+
+				<article class="blog-post">
+					<h2 class="display-5 link-body-emphasis mb-1">X.com: A Placeholder for Promise Unfulfilled</h2>
+					<p class="blog-post-meta">February 8, 2024 by <a href="#">Gary</a></p>
+
+					<p>Lastly, let's muse over X.com - a domain shrouded in mystery and of ambitious projects, it now stands as a digital enigma, a placeholder for potential that remains unfulfilled. The allure of X.com is not in what it offers but in what it could offer, a testament to the power of imagination over reality. Yet, in this vast potential, we find its greatest failing: X.com is a canvas left blank, a story untold, a promise kept in the vault of internet lore. It represents the ultimate in internet pretentiousness – a domain that commands attention not for its content, but for its mere existence and the speculation it breeds. In its silence, X.com whispers of possibilities, yet screams of the internet's penchant for valuing the hypothetical over the tangible, the dream over the deed.</p>
+				</article>
+			</div>
+
+			<div class="col-md-4">
+				<div class="position-sticky" style="top: 2rem;">
+					<div class="p-4 mb-3 bg-body-tertiary rounded">
+						<h4 class="fst-italic">About</h4>
+						<p class="mb-0">Ah, you've somehow navigated to my humble digital abode, Gary's Link Review Blog. Here, I, Gary, stand as the sentinel of truth in a world awash with digital mediocrity. Each post on this site is a testament to my commitment to exposing the banal, the trite, and the downright pretentious underbelly of the internet's seemingly endless links. With a penchant for the critical and a disdain for the average, I dissect submissions with the precision of a surgeon and the grace of a sledgehammer. This blog is not a haven for the easily pleased or the creators of uninspired content; it's a sanctuary for the discerning few who crave the brutal honesty of a world-weary web wanderer. Welcome, and prepare to see the internet through my eyes: unforgiving, unyielding, and unapologetically negative.</p>
+					</div>
+
+					<div>
+						<h4 class="fst-italic">Recent posts</h4>
+						<ul class="list-unstyled">
+							<li>
+								<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+									<svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+										<rect width="100%" height="100%" fill="#777" />
+									</svg>
+									<div class="col-lg-8">
+										<h6 class="mb-0">The GitHub Mirage: Unveiling Digital Graveyards</h6>
+										<small class="text-body-secondary">February 8, 2024</small>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+									<svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+										<rect width="100%" height="100%" fill="#777" />
+									</svg>
+									<div class="col-lg-8">
+										<h6 class="mb-0">Gmail: The Monolith of Missed Opportunities</h6>
+										<small class="text-body-secondary">February 8, 2024</small>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+									<svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+										<rect width="100%" height="100%" fill="#777" />
+									</svg>
+									<div class="col-lg-8">
+										<h6 class="mb-0">X.com: A Placeholder for Promise Unfulfilled</h6>
+										<small class="text-body-secondary">February 8, 2024</small>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="p-4">
+						<h4 class="fst-italic">Archives</h4>
+						<ol class="list-unstyled mb-0">
+							<li><a href="#">March 2021</a></li>
+							<li><a href="#">February 2021</a></li>
+							<li><a href="#">January 2021</a></li>
+							<li><a href="#">December 2020</a></li>
+							<li><a href="#">November 2020</a></li>
+							<li><a href="#">October 2020</a></li>
+							<li><a href="#">September 2020</a></li>
+							<li><a href="#">August 2020</a></li>
+							<li><a href="#">July 2020</a></li>
+							<li><a href="#">June 2020</a></li>
+							<li><a href="#">May 2020</a></li>
+							<li><a href="#">April 2020</a></li>
+						</ol>
+					</div>
+
+					<div class="p-4">
+						<h4 class="fst-italic">Elsewhere</h4>
+						<ol class="list-unstyled">
+							<li><a href="#">GitHub</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Facebook</a></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		const btn = document.querySelector('#submitButton');
+		const input = document.querySelector('#reviewInput');
+		btn.addEventListener('click', async () => {
+			let link = input.value;
+			input.value = "";
+
+			let cleaned = link.match(/.+\.[a-z]{2,5}$/gi);
+			if(cleaned) cleaned = cleaned[0];
+			
+			if(cleaned) {
+				const res = await fetch('/submit_link', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						link: cleaned
+					})
+				}).then(r => r.json());
+
+				if(res.error) {
+					alert("Error: " + res.error);
+					return;
+				}
+
+				alert("Submitted your link! It will be reviewed shortly...");
+
+				document.querySelector('#thearticle').hidden = false;
+				document.querySelector('#thedate').innerText = new Date().toDateString();
+				document.querySelector('#thelink').innerText = cleaned;
+				document.querySelector('#thelink').href = cleaned;
+			} else {
+				alert('Bad link!');
+			}
+		});
+	</script>
+
+</body>
+
+</html>
