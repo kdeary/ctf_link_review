@@ -6,4 +6,4 @@ COPY . .
 RUN yarn install --production
 RUN npx -y playwright@1.41.1 install --with-deps
 CMD ["node", "index.js"]
-EXPOSE 3000s
+EXPOSE 3000
