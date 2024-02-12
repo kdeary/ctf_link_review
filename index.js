@@ -1,6 +1,7 @@
 import 'dotenv/config';
 
 import express from 'express';
+import cors from 'cors';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import { dirname } from 'path';
@@ -16,6 +17,7 @@ const FLAG = process.env.FLAG;
 
 let users = new Map();
 
+app.use(cors());
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
